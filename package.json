@@ -11,7 +11,7 @@
     "prisma:erd": "npx prisma generate",
     "prisma:seed": "npx prisma db seed"
   },
-  "prisma":{
+  "prisma": {
     "seed": "tsx prisma/seed.ts"
   },
   "devDependencies": {
@@ -24,6 +24,7 @@
   "dependencies": {
     "@fastify/cors": "^8.1.1",
     "@prisma/client": "^4.5.0",
-    "fastify": "^4.9.2"
+    "fastify": "^4.9.2",
+    "zod": "^3.19.1"
   }
 }
