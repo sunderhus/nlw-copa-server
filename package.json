@@ -6,8 +6,13 @@
   "scripts": {
     "dev": "tsx --watch src/server.ts",
     "prisma:migrate": "npx prisma migrate dev",
+    "prisma:reset": "npx prisma migrate reset",
     "prisma:studio": "npx prisma studio",
-    "prisma:erd": "npx prisma generate"
+    "prisma:erd": "npx prisma generate",
+    "prisma:seed": "npx prisma db seed"
+  },
+  "prisma":{
+    "seed": "tsx prisma/seed.ts"
   },
   "devDependencies": {
     "@mermaid-js/mermaid-cli": "^9.1.7",
