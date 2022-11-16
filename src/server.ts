@@ -29,20 +29,20 @@ async function bootStrap(){
         return {count}
     })
     
-    fastify.get('/pools/count',async ()=>{
-        const count = await prisma.pool.count()
+    fastify.get('/poll/count',async ()=>{
+        const count = await prisma.poll.count()
 
         return {count}
     });
 
-    fastify.post('/pools',async (request,reply)=>{
-        const createPoolBody = z.object({
+    fastify.post('/poll',async (request,reply)=>{
+        const createPollBody = z.object({
             title:z.string(),
         });
 
-        const {title} = createPoolBody.parse(request.body);
+        const {title} = createPollBody.parse(request.body);
         const code = crypto.randomUUID().toUpperCase();
-        await prisma.pool.create({
+        await prisma.poll.create({
             data:{
                 code,
                 title,
