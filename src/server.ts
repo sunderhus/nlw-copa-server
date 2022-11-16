@@ -29,13 +29,13 @@ async function bootStrap(){
         return {count}
     })
     
-    fastify.get('/poll/count',async ()=>{
+    fastify.get('/polls/count',async ()=>{
         const count = await prisma.poll.count()
 
         return {count}
     });
 
-    fastify.post('/poll',async (request,reply)=>{
+    fastify.post('/polls',async (request,reply)=>{
         const createPollBody = z.object({
             title:z.string(),
         });
