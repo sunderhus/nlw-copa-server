@@ -18,13 +18,37 @@ export default async function pollRoutes(fastify:FastifyInstance){
         });
 
         const {title} = createPollBody.parse(request.body);
+        
+        let ownerId = null;
         const code = crypto.randomUUID().toUpperCase();
-        await prisma.poll.create({
-            data:{
-                code,
-                title,
-            }
-        })
+
+        try{
+            await request.jwtVerify()
+
+            await prisma.poll.create({
+                data:{
+                    code,
+                    title,
+                    ownerId: request.user.sub,
+                    
+                    participants:{
+                        create:{
+                            userId: request.user.sub
+                        }
+                    }
+                }
+            })
+
+        }catch{
+            await prisma.poll.create({
+                data:{
+                    code,
+                    title,
+                }
+            })
+        }
+        
+        
 
 
         return reply.status(201).send({code})

@@ -59,7 +59,6 @@ export default async function authRoutes(fastify:FastifyInstance){
         const token = fastify.jwt.sign({
             name:user.name,
             avatarUrl:user.avatarUrl,
-
         },{
             sub:user.id,
             expiresIn:'7 days'
