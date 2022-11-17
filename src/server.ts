@@ -2,7 +2,7 @@ import cors from '@fastify/cors'
 import jwt from '@fastify/jwt';
 import Fastify from 'fastify'
 import { FastifyInstance } from 'fastify';
-import { pollRoutes,guessRoutes,userRoutes, authRoutes} from '@/routes';
+import { pollRoutes,guessRoutes,userRoutes, authRoutes, gameRoutes} from '@/routes';
 
 type Route = (fastify: FastifyInstance)=> Promise<void>;
 
@@ -36,7 +36,8 @@ async function bootStrap(){
             authRoutes,
             userRoutes,
             pollRoutes,
-            guessRoutes
+            guessRoutes,
+            gameRoutes
         ]
     })
 
