@@ -1,12 +1,20 @@
-import Fastify from 'fastify'
 import cors from '@fastify/cors'
-import {PrismaClient} from 'prisma/prisma-client'
-import crypto from 'crypto';
-import{z} from 'zod'
+import Fastify from 'fastify'
+import { FastifyInstance } from 'fastify';
+import { pollRoutes,guessRoutes,userRoutes} from '@/routes';
 
-const prisma = new PrismaClient({
-    log:['query']
-});
+type Route = (fastify: FastifyInstance)=> Promise<void>;
+
+interface Params {
+    routes:Route[];
+    fastify: FastifyInstance;
+}
+
+const registerRoutes =  async({fastify,routes}:Params)=>{
+    routes.forEach(async (route) => {
+        await fastify.register(route);
+    });
+}
 
 async function bootStrap(){
     const fastify = Fastify({
@@ -16,44 +24,20 @@ async function bootStrap(){
     await fastify.register(cors,{
         origin:true
     });
-
-    fastify.get('/users/count',async ()=>{
-        const count = await prisma.user.count()
-
-        return {count}
-    });
-
-    fastify.get('/guesses/count',async()=>{
-        const count = await prisma.guess.count()
-
-        return {count}
-    })
     
-    fastify.get('/polls/count',async ()=>{
-        const count = await prisma.poll.count()
-
-        return {count}
-    });
-
-    fastify.post('/polls',async (request,reply)=>{
-        const createPollBody = z.object({
-            title:z.string(),
-        });
-
-        const {title} = createPollBody.parse(request.body);
-        const code = crypto.randomUUID().toUpperCase();
-        await prisma.poll.create({
-            data:{
-                code,
-                title,
-            }
-        })
-
-
-        return reply.status(201).send({code})
+    await registerRoutes({
+        fastify,
+        routes:[
+            userRoutes,
+            pollRoutes,
+            guessRoutes
+        ]
     })
 
-    await fastify.listen({port:3333, /*host:'0.0.0.0'*/});
+    await fastify.listen({
+        port:3333,
+        /*host:'0.0.0.0'*/
+    });
 }
 
 bootStrap();
