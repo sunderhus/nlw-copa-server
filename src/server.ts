@@ -1,7 +1,8 @@
 import cors from '@fastify/cors'
+import jwt from '@fastify/jwt';
 import Fastify from 'fastify'
 import { FastifyInstance } from 'fastify';
-import { pollRoutes,guessRoutes,userRoutes} from '@/routes';
+import { pollRoutes,guessRoutes,userRoutes, authRoutes} from '@/routes';
 
 type Route = (fastify: FastifyInstance)=> Promise<void>;
 
@@ -24,10 +25,15 @@ async function bootStrap(){
     await fastify.register(cors,{
         origin:true
     });
+
+    await fastify.register(jwt,{
+        secret:'NLWCopaSecret',
+    });
     
     await registerRoutes({
         fastify,
         routes:[
+            authRoutes,
             userRoutes,
             pollRoutes,
             guessRoutes

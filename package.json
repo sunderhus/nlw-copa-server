@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@fastify/cors": "^8.1.1",
+    "@fastify/jwt": "^6.3.3",
     "@prisma/client": "^4.5.0",
     "explo-cli": "^1.0.6",
     "fastify": "^4.9.2",
