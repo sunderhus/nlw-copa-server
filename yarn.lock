@@ -58,6 +58,14 @@
   resolved "https://registry.yarnpkg.com/@fastify/deepmerge/-/deepmerge-1.1.0.tgz#91f0a5a27034ff76b7bece63a5906894940ace82"
   integrity sha512-E8Hfdvs1bG6u0N4vN5Nty6JONUfTdOciyD5rn8KnEsLKIenvOVcr210BQR9t34PRkNyjqnMLGk3e0BsaxRdL+g==
 
+"@fastify/env@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fastify/env/-/env-4.1.0.tgz#016c18f74c0c7d2502c08ca28dc805edefd78583"
+  integrity sha512-9l+JTUiFWSwb9dGSeR46aDWBjrAg8lJeqMjbotG5/8Ho90+qzRbt8kdSnVhLm5k6HcqXcBaBAT/6cImRhRq0VQ==
+  dependencies:
+    env-schema "^5.0.0"
+    fastify-plugin "^4.0.0"
+
 "@fastify/error@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@fastify/error/-/error-3.0.0.tgz#bfcb7b33cec0196413083a91ef2edc7b2c88455b"
@@ -662,7 +670,12 @@ dom-walk@^0.1.0:
   resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.2.tgz#0c548bef048f4d1f2a97249002236060daa3fd84"
   integrity sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w==
 
-dotenv@^16.0.3:
+dotenv-expand@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv-expand/-/dotenv-expand-9.0.0.tgz#1fd37e2cd63ea0b5f7389fb87256efc38b035b26"
+  integrity sha512-uW8Hrhp5ammm9x7kBLR6jDfujgaDarNA02tprvZdyrJ7MpdzD1KyrIHG4l+YoC2fJ2UcdFdNWNWIjt+sexBHJw==
+
+dotenv@^16.0.0, dotenv@^16.0.3:
   version "16.0.3"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.3.tgz#115aec42bac5053db3c456db30cc243a5a836a07"
   integrity sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==
@@ -725,6 +738,15 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0, end-of-stream@^1.4.1:
   integrity sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==
   dependencies:
     once "^1.4.0"
+
+env-schema@^5.0.0:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/env-schema/-/env-schema-5.1.1.tgz#8af691a784d787bceb4b2229729204294f5e7f46"
+  integrity sha512-3jftabBd44XEYFCZjLg5Ris/7DKz09AJClvJEJXh8eciBPbKXSzdgwLZqpqA1lKmNkHFiAqr7JAqTToU80mDew==
+  dependencies:
+    ajv "^8.0.0"
+    dotenv "^16.0.0"
+    dotenv-expand "^9.0.0"
 
 esbuild-android-64@0.15.12:
   version "0.15.12"
