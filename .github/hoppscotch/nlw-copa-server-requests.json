@@ -1,0 +1,252 @@
+[
+  {
+    "v": 1,
+    "name": "Polls",
+    "folders": [],
+    "requests": [
+      {
+        "v": "1",
+        "endpoint": "http://localhost:3333/polls",
+        "name": "create",
+        "params": [],
+        "headers": [],
+        "method": "POST",
+        "auth": {
+          "authType": "none",
+          "authActive": true,
+          "addTo": "Headers",
+          "key": "",
+          "value": ""
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"title\":\"Az pools\"\n}"
+        }
+      },
+      {
+        "v": "1",
+        "endpoint": "http://localhost:3333/polls/count",
+        "name": "count",
+        "params": [],
+        "headers": [],
+        "method": "GET",
+        "auth": {
+          "authType": "none",
+          "authActive": true,
+          "addTo": "Headers",
+          "key": "",
+          "value": ""
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": null,
+          "body": null
+        }
+      },
+      {
+        "v": "1",
+        "endpoint": "http://localhost:3333/polls",
+        "name": "list polls",
+        "params": [],
+        "headers": [],
+        "method": "GET",
+        "auth": {
+          "authType": "bearer",
+          "authActive": true,
+          "addTo": "Headers",
+          "key": "",
+          "value": "",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWF0aGV1cyBDYXN0cm8iLCJhdmF0YXJVcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BTG01d3UzTEJhbFAwaUZJSlRlX193OXRLdGRqYWFOdktQM1BudmxxSUNhRnVnPXM5Ni1jIiwic3ViIjoiY2xhbGV0MXYzMDAwMGxva2RjeDFrbWFmOSIsImlhdCI6MTY2ODcxMDI5NSwiZXhwIjoxNjY5MzE1MDk1fQ.p0_49wzN_KaXyCEdqPzQi030_GbWq8g8JfXVX7u2Klg"
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"title\":\"Bolão da copa\"\n}"
+        }
+      },
+      {
+        "v": "1",
+        "endpoint": "http://localhost:3333/polls/clalfmjhk0001lozszmj4ouxu",
+        "name": "poll by code",
+        "params": [],
+        "headers": [],
+        "method": "GET",
+        "auth": {
+          "authType": "bearer",
+          "authActive": true,
+          "addTo": "Headers",
+          "key": "",
+          "value": "",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWF0aGV1cyBDYXN0cm8iLCJhdmF0YXJVcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BTG01d3UzTEJhbFAwaUZJSlRlX193OXRLdGRqYWFOdktQM1BudmxxSUNhRnVnPXM5Ni1jIiwic3ViIjoiY2xhbGV0MXYzMDAwMGxva2RjeDFrbWFmOSIsImlhdCI6MTY2ODcxMDI5NSwiZXhwIjoxNjY5MzE1MDk1fQ.p0_49wzN_KaXyCEdqPzQi030_GbWq8g8JfXVX7u2Klg"
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"title\":\"Bolão da copa\"\n}"
+        }
+      }
+    ]
+  },
+  {
+    "v": 1,
+    "name": "Guesses",
+    "folders": [],
+    "requests": [
+      {
+        "v": "1",
+        "endpoint": "http://localhost:3333/guesses/count",
+        "name": "count",
+        "params": [],
+        "headers": [],
+        "method": "GET",
+        "auth": {
+          "authType": "none",
+          "authActive": true,
+          "addTo": "Headers",
+          "key": "",
+          "value": ""
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": null,
+          "body": null
+        }
+      },
+      {
+        "v": "1",
+        "endpoint": "http://localhost:3333/guesses/clalfmjhk0001lozszmj4ouxu/games/claljshwo0000lo8y8pwuo8ug",
+        "name": "create ",
+        "params": [],
+        "headers": [],
+        "method": "POST",
+        "auth": {
+          "authType": "bearer",
+          "authActive": true,
+          "addTo": "Headers",
+          "key": "",
+          "value": "",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWF0aGV1cyBDYXN0cm8iLCJhdmF0YXJVcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BTG01d3UzTEJhbFAwaUZJSlRlX193OXRLdGRqYWFOdktQM1BudmxxSUNhRnVnPXM5Ni1jIiwic3ViIjoiY2xhbGV0MXYzMDAwMGxva2RjeDFrbWFmOSIsImlhdCI6MTY2ODcxMDI5NSwiZXhwIjoxNjY5MzE1MDk1fQ.p0_49wzN_KaXyCEdqPzQi030_GbWq8g8JfXVX7u2Klg"
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"firstTeamPoints\": 2,\n  \"secondTeamPoints\": 1\n}"
+        }
+      }
+    ]
+  },
+  {
+    "v": 1,
+    "name": "Users",
+    "folders": [],
+    "requests": [
+      {
+        "v": "1",
+        "endpoint": "http://localhost:3333/users/count",
+        "name": "count",
+        "params": [],
+        "headers": [],
+        "method": "GET",
+        "auth": {
+          "authType": "none",
+          "authActive": true,
+          "addTo": "Headers",
+          "key": "",
+          "value": ""
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": null,
+          "body": null
+        }
+      }
+    ]
+  },
+  {
+    "v": 1,
+    "name": "Auth",
+    "folders": [],
+    "requests": [
+      {
+        "v": "1",
+        "endpoint": "http://localhost:3333/auth",
+        "name": "create user",
+        "params": [],
+        "headers": [],
+        "method": "POST",
+        "auth": {
+          "authType": "none",
+          "authActive": true,
+          "addTo": "Headers",
+          "key": "",
+          "value": ""
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"access_token\": \"ya29.a0AeTM1ieHoPeStG8go5_MyihlQyjQDyi-CYU4F1wnvk_0qLzVeG7lju_TKFksVLV0MVeBofkRBbgMqpMRzQy7h6IIUmx3O21LGh_CA1Nof5uR_IHj84-8Qz905jJSErBmwhaDa4l1ITi2NyswXxl3NVlt0gq4vAaCgYKAS8SARESFQHWtWOmju9V-7-xwPGT-ZYj1WAShQ0165\"\n}"
+        }
+      },
+      {
+        "v": "1",
+        "endpoint": "http://localhost:3333/me",
+        "name": "me",
+        "params": [],
+        "headers": [],
+        "method": "GET",
+        "auth": {
+          "authType": "bearer",
+          "authActive": true,
+          "addTo": "Headers",
+          "key": "",
+          "value": "",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWF0aGV1cyBDYXN0cm8iLCJhdmF0YXJVcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BTG01d3UzTEJhbFAwaUZJSlRlX193OXRLdGRqYWFOdktQM1BudmxxSUNhRnVnPXM5Ni1jIiwic3ViIjoiY2xhbGV0MXYzMDAwMGxva2RjeDFrbWFmOSIsImlhdCI6MTY2ODc3NjA4NywiZXhwIjoxNjY5MzgwODg3fQ.ZVgKGKpKia7F_CqglkVDWimU5KfcVap2Vz2sXqENaQk"
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": null,
+          "body": null
+        }
+      }
+    ]
+  },
+  {
+    "v": 1,
+    "name": "Games",
+    "folders": [],
+    "requests": [
+      {
+        "v": "1",
+        "endpoint": "http://localhost:3333/game/clalfmjhk0001lozszmj4ouxu",
+        "name": "games",
+        "params": [],
+        "headers": [],
+        "method": "GET",
+        "auth": {
+          "authType": "bearer",
+          "authActive": true,
+          "addTo": "Headers",
+          "key": "",
+          "value": "",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWF0aGV1cyBDYXN0cm8iLCJhdmF0YXJVcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BTG01d3UzTEJhbFAwaUZJSlRlX193OXRLdGRqYWFOdktQM1BudmxxSUNhRnVnPXM5Ni1jIiwic3ViIjoiY2xhbGV0MXYzMDAwMGxva2RjeDFrbWFmOSIsImlhdCI6MTY2ODcxMDI5NSwiZXhwIjoxNjY5MzE1MDk1fQ.p0_49wzN_KaXyCEdqPzQi030_GbWq8g8JfXVX7u2Klg"
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": null,
+          "body": null
+        }
+      }
+    ]
+  }
+]
